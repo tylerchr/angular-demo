@@ -19,7 +19,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Configure routes
-app.use('/', index);
+// app.use('/', index);
 app.use('/posts', posts);
 
 // catch 404 and forward to error handler

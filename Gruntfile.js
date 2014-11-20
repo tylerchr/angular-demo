@@ -18,8 +18,6 @@ module.exports = function(grunt) {
     }
   });
 
-  grunt.registerTask('default', [
-    'uncss'
-  ]);
+  grunt.registerTask('default', [ ]);
 
 };
