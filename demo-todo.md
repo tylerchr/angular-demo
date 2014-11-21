@@ -18,7 +18,9 @@
 - finish service
 - finish controller
 - blog-post-editor
+- make views save
 
+## Add post
 
 var post = {
 	id: 123,
