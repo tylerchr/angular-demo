@@ -1,6 +1,7 @@
 <!doctype html>
 <html>
 	<head>
+		<title>Intro to AngularJS</title>
 		<!-- Bootstrap CSS -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
 		<!-- AngularJS -->
@@ -9,8 +10,8 @@
 		<link rel="stylesheet" href="styles.css">
 		<script src='app.js'></script>
 	</head>
-	<body ng-app='blogApp'>
-		<div ng-controller='blogController' class="main-page">
+	<body>
+		<div class="main-page">
 
 			<!-- header -->
 			<nav class='navbar navbar-inverse navbar-fixed-top'>
@@ -22,25 +23,21 @@
 			<div class='container'>
 				<div>
 					<ol class="breadcrumb">
-						<li ng-class='{active: !state.activePost}'><a ng-click='state.activePost=null; state.editing=false'>Posts</a></li>
-						<li ng-if='state.activePost' class='active'>{{state.activePost.title}}</li>
+						<li><a>Posts</a></li>
 					</ol>
 				</div>
 
 				<!-- blog post list -->
-				<div ng-if='!state.activePost'>
+				<div>
 					<ul>
-						<li ng-repeat='post in posts'>
-							<h3><a ng-click='viewPost(post)'>{{post.title}}</a></h3>
-							<div>{{ post.views || 0 }} views <span ng-if="post.views > 2" class="label label-warning">Popular!</span></div>
-							<em>Posted at {{ post.creationDate | date:'medium' || 0 }}</em>
+						<li>
+							<h3><a>A very long day</a></h3>
+							<div>0 views</div>
+							<em>Posted Nov 21, 2014 11:26:01 AM</em>
 						</li>
 					</ul>
-					<a class='btn btn-success' ng-click='addPost()'>Add Blog Post</a>
+					<a class='btn btn-success'>Add Blog Post</a>
 				</div>
-
-				<div ng-if='state.activePost && !state.editing' blog-post ng-model='state.activePost'></div>
-				<div ng-if='state.activePost && state.editing' blog-post-editor ng-model='state.activePost'></div>
 			</div>
 		</div>
 		<footer>
