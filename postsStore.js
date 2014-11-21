@@ -6,6 +6,13 @@ var posts = {
     content: 'Today was a very long day',
     creationDate: new Date().getTime(),
     views: 0
+  },
+  2: {
+    id: 2,
+    title: 'Welcome to the blog',
+    content: 'You must be new here!',
+    creationDate: new Date().getTime() - 1307,
+    views: 3
   }
 };
 
